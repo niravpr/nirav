@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nirav Portfolio - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+
+
+  <style>
+   body {
+  background: linear-gradient(to top left, #7209b7, #171717, #111111, #7209b7);
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.nav-link {
+  font-weight: 500;
+  /* transition: color 0.3s ease; */
+  font-family: 'Quicksand', sans-serif;
+  transition: all 0.4s;
+}
+
+.nav-link:hover {
+  color: #f72585 !important;
+  letter-spacing: 5px;
+}
+
+.hero-section {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero-section h1 span {
+  background: linear-gradient(45deg, #f72585, #7209b7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(114, 9, 183, 0.4);
+  transition: transform 0.4s ease;
+  background: rgb(18, 18, 18);
+}
+
+.hero-img:hover {
+  transform: scale(1.05);
+}
+
+.imgg {
+  background-color: rgba(0, 0, 0, 0.3);  
+  backdrop-filter: blur(10px);
+  width: 370px;
+  height: 370px;
+  border-radius: 50%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(218, 218, 218, 0.058);
+}
+
+.work-card {
+  background-color: rgba(0, 0, 0, 0.202);
+  backdrop-filter: blur(4px);
+  border-radius: 20px;
+  border-top: 3px solid rgba(255, 255, 255, 0.1);
+  color: #eee;
+  height: 100%;
+  font-family: 'Quicksand', sans-serif;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+}
+
+.work-card:hover {
+  transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) scale(1.03);
+  box-shadow: 0 12px 30px rgba(136, 0, 255, 0.195), 0 0 20px rgba(170, 0, 255, 0.162);
+}
+
+.work-card i {
+  transition: 0.3s;
+}
+
+.work-card:hover i {
+  color: #f72585;
+  transform: scale(1.2);
+}
+
+
+
+
+
+.footer-link {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.4s;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.footer-link:hover {
+  color: #7209b7;
+   letter-spacing: 3px;
+}
+
+.logo-img {
+  height: 80px;
+  width: 80px;
+  transition: .6s;
+  
+}
+
+.logo-img:hover {
+  transform: scale(1.3) rotate(360deg);
+
+}
+
+.cursor {
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.glass-box {
+  background-color: rgba(0, 0, 0, 0.222);
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(2, 0, 36, 0.37);
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  position: relative;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.arrow-icon {
+  font-size: 2rem;
+  color: #f72585;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+}
+
+.typewriter-text {
+  white-space: pre-line;
+  font-family:'Quicksand', sans-serif;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #f72585, #7209b7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(0, 0, 0, 0.394);
+  backdrop-filter: blur(6px);
+  padding: 60px 0 30px;
+  color: #ccc;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+footer h5 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 30px;
+  padding-top: 20px;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #f72585, #7209b7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: opacity(.5);
+}
+
+
+
+
+  </style>
+</head>
+
+<body>
+
+  
+
+  <!-- Header -->
+  <header class="container py-3 d-flex justify-content-between align-items-center">
+    <img src="img/logo.png" alt="" class="logo-img ">
+    <nav>
+      <ul class="nav gap-3">
+        <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- animation  -->
+
+  <div id="particles-js"></div>
+
+
+  <!-- Hero -->
+  <section class="hero-section container text-center">
+    <h1 class="mt-3"><span id="typewriter"></span></h1>
+    <div class="imgg mx-auto mt-5 " data-aos="fade-up" data-aos-duration="1500">
+      <img src="img/ID Card Front.png" alt="Nirav Character" class="hero-img">
+    </div>
+  </section>
+
+<!-- ABOUT ME SECTION -->
+<section class="py-5 mb-5 mt-5" id="about">
+  <div class="container " data-aos="fade-up" data-aos-duration="1200">
+    <h2 class="display-5 fw-bold mb-5 text-white text-center">About <span class="gradient-text">Me</span></h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="glass-box p-4 work-card">
+          <div class="about-typing d-flex">
+            <span class="arrow-icon me-3">➤</span>
+            <p id="about-typing-text" class="typewriter-text mb-0"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- My Work -->
+ <section class="container py-5 mt-5 mb-5" id="work" data-aos="fade-up" data-aos-duration="1200">
+   <h2 class="display-5 fw-bold mb-5 text-white text-center"> What <span class="gradient-text">I Do</span></h2>
+  <!-- <h2 class="text-center mb-5">What I Do</h2> -->
+   <!-- <i class="fas fa-briefcase me-2"></i> -->
+  <div class="row g-4">
+
+    <div class="col-md-6 col-lg-4">
+      <div class="work-card p-4 h-100" style=" background-color: rgba(0, 0, 0, 0.222);">
+        <i class="fas fa-code fa-2x mb-3"></i>
+        <h4>Web Development</h4>
+        <p>I build dynamic, responsive websites using modern stacks like React, Next.js, and Node.js with clean UI/UX.</p>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div class="work-card p-4 h-100" style=" background-color: rgba(0, 0, 0, 0.222);">
+        <i class="fas fa-paint-brush fa-2x mb-3"></i>
+        <h4>Graphic Design</h4>
+        <p>Designing visuals that speak — posters, branding, social media, and motion graphics.</p>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div class="work-card p-4 h-100" style=" background-color: rgba(0, 0, 0, 0.222);">
+        <i class="fas fa-cube fa-2x mb-3"></i>
+        <h4>3D Artist</h4>
+        <p>Crafting 3D models, scenes, and cinematic renders using Blender and Unreal Engine.</p>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-6">
+      <div class="work-card p-4 h-100" style=" background-color: rgba(0, 0, 0, 0.222);">
+        <i class="fas fa-layer-group fa-2x mb-3"></i>
+        <h4>UI/UX Design</h4>
+        <p>Creating intuitive, delightful interfaces with tools like Figma, Adobe XD & Framer. User flows are my jam!</p>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-6">
+      <div class="work-card p-4 h-100" style=" background-color: rgba(0, 0, 0, 0.222);">
+        <i class="fas fa-film fa-2x mb-3"></i>
+        <h4>Animation</h4>
+        <p>I transform static visuals into dynamic, engaging motion with precision and creativity.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="text-center" >
+    <div class="container">
+      <h5>Let's Connect</h5>
+      <div class="d-flex justify-content-center gap-4 flex-wrap mb-4">
+        <a href="mailto:nirav@example.com" class="footer-link"><i class="fas fa-envelope me-2"></i>Email</a>
+        <a href="#" class="footer-link"><i class="fab fa-github me-2"></i>GitHub</a>
+        <a href="#" class="footer-link"><i class="fab fa-linkedin me-2"></i>LinkedIn</a>
+        <a href="#" class="footer-link"><i class="fab fa-behance me-2"></i>Behance</a>
+        <a href="#" class="footer-link"><i class="fab fa-instagram me-2"></i>Instagram</a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Nirav Portfolio — Crafted with ❤️ & endless curiosity.</p>
+        <p class="small">Design | Code | Animation | Experience</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- all script  -->
+  
+
+  <!-- Typewriter Script -->
+  <script>
+    const text = "Hello I'm ";
+    const name = "NIRAV";
+    const fullText = text + name;
+    let i = 0;
+    let forward = true;
+
+    function typeEffect() {
+      const el = document.getElementById("typewriter");
+
+      if (forward) {
+        if (i <= fullText.length) {
+          const typed = fullText.substring(0, i);
+          const whitePart = typed.substring(0, text.length);
+          const gradientPart = typed.substring(text.length);
+          el.innerHTML = whitePart + '<span class="gradient-text">' + gradientPart + '</span><span class="cursor">|</span>';
+          i++;
+          setTimeout(typeEffect, 150);
+        } else {
+          forward = false;
+          setTimeout(typeEffect, 1000);
+        }
+      } else {
+        if (i >= 0) {
+          const typed = fullText.substring(0, i);
+          const whitePart = typed.substring(0, text.length);
+          const gradientPart = typed.substring(text.length);
+          el.innerHTML = whitePart + '<span class="gradient-text">' + gradientPart + '</span><span class="cursor">|</span>';
+          i--;
+          setTimeout(typeEffect, 100);
+        } else {
+          forward = true;
+          setTimeout(typeEffect, 500);
+        }
+      }
+    }
+
+    window.onload = typeEffect;
+  </script>
+
+
+  <!-- animation script  -->
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init();
+</script>
+
+
+
+  <!-- header animation effect  -->
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 80 },
+        "size": { "value": 3 },
+        "color": { "value": "#7209b7" },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#7209b7",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" }
+        }
+      }
+    });
+  </script>
+
+
+  <!-- about section type animation  -->
+
+
+  <script>
+  const aboutTypingTextContent = `I'm a passionate and versatile Graphic, Web, and 3D Designer who loves turning ideas into bold visual stories. From creating sleek interfaces and engaging web layouts to crafting eye-catching posters and realistic 3D scenes, I blend creativity with precision. With tools like Photoshop, Illustrator, After Effects, and Blender at my fingertips, and a solid grip on HTML, CSS, JavaScript, and Bootstrap, I design experiences that are both beautiful and functional. I believe in clean aesthetics, modern design, and pushing boundaries—whether it’s pixels on a screen or polygons in a scene. Design isn't just what I do—it's how I think.`;
+
+  let aboutTypingIndex = 0;
+  const aboutTypingSpeed = 5;
+  const aboutTypingOutput = document.getElementById("about-typing-text");
+
+  function runAboutTypewriter() {
+    if (aboutTypingIndex < aboutTypingTextContent.length) {
+      aboutTypingOutput.innerHTML += aboutTypingTextContent.charAt(aboutTypingIndex);
+      aboutTypingIndex++;
+      setTimeout(runAboutTypewriter, aboutTypingSpeed);
+    }
+  }
+
+  let aboutTypingStarted = false;
+  const aboutTypingObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !aboutTypingStarted) {
+        runAboutTypewriter();
+        aboutTypingStarted = true;
+      }
+    });
+  });
+
+  aboutTypingObserver.observe(document.querySelector("#about"));
+</script>
+
+  <!-- end  -->
+
+</body>
+</html>
